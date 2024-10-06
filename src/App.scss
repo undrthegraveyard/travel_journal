@@ -46,7 +46,7 @@ $font-weight-subtitle: 500;
 
 //custom properties
 
-body,html{
+body{
   font-family: $font-family;
 
   display: flex;
@@ -171,17 +171,19 @@ body,html{
 }
 
 @media screen and (max-width: 500px) {
+  body{
+
   .card-container {
   grid-template-columns:1fr;
     gap: 0em;
   }
   
-  body .card-container .card {
-    display: flex;
-    flex-direction: column; 
+  .card-container .card{
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1em;
     padding: 1em;
-    margin: 0.5em ;
+   margin: 0;
 
     .card-image{
       display: flex;
@@ -189,5 +191,6 @@ body,html{
       width: 50%;
      
     }
+  }
   }
 }
