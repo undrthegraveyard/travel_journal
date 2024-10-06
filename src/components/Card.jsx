@@ -1,11 +1,24 @@
 import '../App.scss'
 import Locationpinicon from '../assets/location-pin-icon.svg'
+// Import all images
+import eiffelTower from '../assets/eiffel-tower.jpg'
+import greatWall from '../assets/great-wall-of-china.jpg'
+import colosseum from '../assets/colosseum.jpg'
+import sydneyOpera from '../assets/sydney-opera-house.jpg'
+
+// Create an object to map image names to their imports
+const images = {
+  'eiffel-tower.jpg': eiffelTower,
+  'great-wall-of-china.jpg': greatWall,
+  'colosseum.jpg': colosseum,
+  'sydney-opera-house.jpg': sydneyOpera,
+}
 
 export default function Card(props){
     return(
         <div className="card">
             <div className="card-image">
-              <img src={`/src/assets/${props.item.imageUrl}`} />
+              <img src={images[props.item.imageUrl]} alt={props.item.title} />
             </div>
             <div className="card-content">
               <div className="card-content-location">
